@@ -13,7 +13,7 @@ async function startCountdown() {
     return;
   }
 
-  const nextBackDelay = 250; //ms
+  const nextBackDelay = 150; //ms
 
   /**
    * Deezer's 'back' button is disabled if the song is the first in the playlist,
@@ -34,12 +34,15 @@ async function startCountdown() {
     pauseButton.click();
   }
 
-  const numSeconds = 3;
+  // Deezer usually takes 0.5 a second to start playing a song. Will this vary depending on machine and network?
+  const deezerDelay = 500; // ms
 
-  for(let i = 0; i < numSeconds; i++) {
+  const numBeats = 3;
+  for(let i = 0; i < numBeats; i++) {
     window.beatAudio.play();
-    if(i === numSeconds -1){
-      await wait(1000 - nextBackDelay);
+    if(i === (numBeats - 1)) {
+      // This calculated delay makes the song start in the next beat +/-...
+      await wait(1000 - nextBackDelay - deezerDelay);
     }else{
       await wait(1000);
     }
