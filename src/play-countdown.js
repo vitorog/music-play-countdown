@@ -1,3 +1,9 @@
+// Prevents intermittent errors caused by the audio playing before the file was properly loaded
+if(!window.loadedAudio) {
+  window.beatAudio = new Audio(browser.runtime.getURL('sounds/beat.ogg'));
+  window.loadedAudio = true;
+}
+
 async function startCountdown() {
   const wait = (delay) => new Promise(resolve => setTimeout(resolve, delay));
 
@@ -28,11 +34,10 @@ async function startCountdown() {
     pauseButton.click();
   }
 
-  const beatAudio = new Audio(browser.runtime.getURL('sounds/beat.ogg'));
   const numSeconds = 3;
 
   for(let i = 0; i < numSeconds; i++) {
-    beatAudio.play();
+    window.beatAudio.play();
     if(i === numSeconds -1){
       await wait(1000 - nextBackDelay);
     }else{
