@@ -1,0 +1,25 @@
+{
+  "description": "Performs a decreasing countdown before a song starts playing.",
+  "manifest_version": 2,
+  "name": "Music Play Countdown",
+  "version": "0.1",
+  "homepage_url": "https://github.com/vitorog/music-play-countdown",
+  "icons": {
+    "32": "icons/metronome.png"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "page_action": {
+    "default_icon": "icons/metronome.png",
+    "default_title": "Music Play Countdown",
+    "default_popup": "src/popup/popup.html",
+    "show_matches": ["*://www.deezer.com/*"]
+  },
+
+  "web_accessible_resources": [
+    "sounds/beat.ogg"
+  ]
+}
