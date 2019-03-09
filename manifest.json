@@ -26,11 +26,11 @@
   "content_scripts": [
     {
       "matches": ["*://www.deezer.com/*"],
-      "js": ["src/content-scripts/deezer.js"]
+      "js": ["src/content-scripts/metronome.js", "src/content-scripts/deezer.js"]
     },
     {
       "matches": ["*://open.spotify.com/*"],
-      "js": ["src/content-scripts/spotify.js"]
-    }
+      "js": ["src/content-scripts/metronome.js","src/content-scripts/spotify.js"]
+    },
   ]
 }
