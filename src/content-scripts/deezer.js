@@ -4,9 +4,6 @@ if(!window.isLoaded) {
   window.isLoaded = true;
 }
 
-/**
- * Enables "Repeat Song"
- */
 function enableRepeat() {
   // Repeat is not active
   let repeatButton = document.querySelector('.player-options [class="svg-icon svg-icon-repeat"]');
@@ -48,7 +45,6 @@ async function playBeats(params) {
 }
 
 async function play(params) {
-  console.log(params);
   pauseSong();
   enableRepeat();
   await playBeats(params);

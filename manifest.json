@@ -16,7 +16,7 @@
     "default_icon": "icons/metronome.png",
     "default_title": "Music Play Countdown",
     "default_popup": "src/popup/popup.html",
-    "show_matches": ["*://www.deezer.com/*"]
+    "show_matches": ["*://www.deezer.com/*", "*://open.spotify.com/*"]
   },
 
   "web_accessible_resources": [
@@ -27,6 +27,10 @@
     {
       "matches": ["*://www.deezer.com/*"],
       "js": ["src/content-scripts/deezer.js"]
+    },
+    {
+      "matches": ["*://open.spotify.com/*"],
+      "js": ["src/content-scripts/spotify.js"]
     }
   ]
 }
