@@ -5,7 +5,8 @@
   "version": "1.0",
   "homepage_url": "https://github.com/vitorog/music-play-countdown",
   "icons": {
-    "32": "icons/metronome.png"
+    "48": "icons/metronome.svg",
+    "96": "icons/metronome.svg"
   },
   "author": "Vitor Gomes",
 
@@ -14,7 +15,10 @@
   ],
 
   "page_action": {
-    "default_icon": "icons/metronome.png",
+    "default_icon": {
+      "19": "icons/metronome-19.png",
+      "38": "icons/metronome-38.png"
+    },
     "default_title": "Music Play Countdown",
     "default_popup": "src/popup/popup.html",
     "show_matches": ["*://www.deezer.com/*", "*://open.spotify.com/*"]
@@ -27,11 +31,11 @@
   "content_scripts": [
     {
       "matches": ["*://www.deezer.com/*"],
-      "js": ["src/content-scripts/metronome.js", "src/content-scripts/deezer.js"]
+      "js": ["src/content-scripts/deezer.js"]
     },
     {
       "matches": ["*://open.spotify.com/*"],
-      "js": ["src/content-scripts/metronome.js","src/content-scripts/spotify.js"]
+      "js": ["src/content-scripts/spotify.js"]
     }
   ]
 }

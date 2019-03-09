@@ -1,5 +1,3 @@
-import { playBeats } from './metronome';
-
 if(!window.isLoaded) {
   browser.runtime.onMessage.addListener(play);
   window.beatAudio = new Audio(browser.runtime.getURL('sounds/beat.ogg'));
@@ -24,6 +22,16 @@ function pauseSong() {
   const pauseButton = document.querySelector('.player-controls [class="control-button spoticon-pause-16 control-button--circled"');
   if(pauseButton){
     pauseButton.click();
+  }
+}
+
+async function playBeats(params) {
+  const wait = (delay) => new Promise(resolve => setTimeout(resolve, delay));
+
+  const delay = 1000;
+  for (let i = 0; i < params.numBeats; i++) {
+    window.beatAudio.play();
+    await wait(delay);
   }
 }
 
