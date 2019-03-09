@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="popup.css"/>
-  </head>
+    <link rel="stylesheet" type="text/css" href="popup.css"/>
+</head>
 
 <body>
-  <div id="popup-content">
-    <div class="button">Countdown</div>
-  </div>
-  <div id="error-content" class="hidden">
-    <p>Can't perform "play countdown" in this web page.</p>
-  </div>
-  <script src="popup.js"></script>
-</body>
+<div id="popup-content">
+    <div class="field">
+        <label for="num-beats">Number of beats</label>
+        <input id="num-beats" type="number" min="1" max="10" value="4">
+    </div>
 
+    <div class="button" id="play-button">Play</div>
+</div>
+<div id="error-content" class="hidden">
+    <p>Can't perform "play countdown" in this web page.</p>
+</div>
+<script src="popup.js"></script>
+</body>
 </html>
