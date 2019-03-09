@@ -2,17 +2,13 @@
   "description": "Performs a countdown before playing a song.",
   "manifest_version": 2,
   "name": "Music Play Countdown",
-  "version": "1.0",
+  "version": "1.0.1",
   "homepage_url": "https://github.com/vitorog/music-play-countdown",
   "icons": {
     "48": "icons/metronome.svg",
     "96": "icons/metronome.svg"
   },
   "author": "Vitor Gomes",
-
-  "permissions": [
-    "activeTab"
-  ],
 
   "page_action": {
     "default_icon": {
