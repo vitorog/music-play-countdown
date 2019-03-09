@@ -32,6 +32,6 @@
     {
       "matches": ["*://open.spotify.com/*"],
       "js": ["src/content-scripts/metronome.js","src/content-scripts/spotify.js"]
-    },
+    }
   ]
 }

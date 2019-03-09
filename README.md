@@ -5,7 +5,7 @@ This extension was made for people who like to play their instruments along with
 The countdown gives us time to get ready before the song actually starts playing.
 
 ## Instructions:
-1. Select a song to play in a web player*
+1. Go to a supported web player and select a song to play*
 2. Click on the metronome icon
 3. Select the number of beats (each beat is 1 second)
 4. Click on "Play" and the countdown will start
