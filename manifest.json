@@ -2,7 +2,7 @@
   "description": "Performs a countdown before playing a song.",
   "manifest_version": 2,
   "name": "Music Play Countdown",
-  "version": "0.1",
+  "version": "1.0",
   "homepage_url": "https://github.com/vitorog/music-play-countdown",
   "icons": {
     "32": "icons/metronome.png"
