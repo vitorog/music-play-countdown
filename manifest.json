@@ -1,5 +1,5 @@
 {
-  "description": "Performs a decreasing countdown before a playing a song.",
+  "description": "Performs a countdown before playing a song.",
   "manifest_version": 2,
   "name": "Music Play Countdown",
   "version": "0.1",
